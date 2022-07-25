@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accent Recognition</title>
+</head>
+<body>
+<div id="speechcontainer">
+    <h1>Upload new file</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <br>
+        <br>
+        <input type = "submit" value="Predict Accent" />
+    </form>
+    
+    {% if prediction != '' %}
+        <div id = 'predictioncontainer'>
+            <h1>Prediction</h1>
+            <p id = "predictiontext">{{ prediction }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
